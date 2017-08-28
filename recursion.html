@@ -1,0 +1,63 @@
+<html>
+  <h1>Hello </h1>
+  <script>
+    
+  function countsSheepDown(num) {
+    // base case
+    if (num === 0) {
+      console.log('No sheep left!');
+      return;
+    }
+    // recursive case
+    console.log(`${num} - another sheep jumped over the fence`)
+    return `${countsSheep(num-1)} - another sheep jumped over the fence`;
+  }
+  // countsSheepDown(10);
+
+function countsSheep(num) {
+ const STOP = num; 
+  if (counter === STOP) {
+    return;
+  }
+    console.log(counter);
+  console.log(`${counter} sheep jumps over the fence `);
+  countsSheep(counter++,num);
+}
+
+// countsSheep(3);
+
+// Problem Two: Doubles Array
+
+// what is the input to the program: arr
+// what is the output of the program: array with all numbers doubled
+// what is the input to each recursive calls: array except for the first or last item of the array
+// what is the output of each recursive calls: the array of the doubled items
+
+  function doublesArray(arr) {
+    // base case
+    if (!arr.length) {
+      return [];
+    }
+    // recursive case
+      let firstItem = arr[0]
+      return [firstItem*2, ...doublesArray(arr.slice(1))]
+  }
+
+  console.log(doublesArray([1,2,3,4,5]));
+  
+  //   function doublesArray(arr) {
+  //   // base case
+  //   if (arr.length === 0) {
+  //     return;
+  //   }
+  //   // recursive case
+  //     let firstItem = arr[0]
+  //     let doubledArray = [];
+  //     return [...doubledArray, firstItem*2]
+  //     // firstItem*2 + doublesArray(arr.slice(1))
+  // }
+
+  // doublesArray([1,2,3,4,5]);
+  </script>
+  </script>
+</html>
