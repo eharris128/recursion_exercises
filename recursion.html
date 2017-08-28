@@ -100,7 +100,7 @@
     return [strSegment, ...stringSplitter(str, separator)]
   }
 
-  console.log(stringSplitter('I love to type', 'o'));
+  // console.log(stringSplitter('I love to type', 'o'));
 
 // stringSplitter = (str, separator) => {
 //   let results = [];
@@ -121,6 +121,34 @@
 //   return results;
 
 // }
+
+
+// Problem 6: Binary Representation
+// what is the input: num in base 10
+// what is the output: num in base 2
+// what is the input to each recursive calls: 
+// what is the output of each recursive calls:
+
+toBinary = (num) => {
+// base case 
+  if (num === 0) {
+    return '';
+  }
+// recursive case
+  let binaryRemainder = (num%2)
+  return ( toBinary( Math.floor(num/2) ) + binaryRemainder )
+} 
+
+console.log(toBinary(7))
+
+
+
+
+
+// what is the input: 
+// what is the output: 
+// what is the input to each recursive calls:
+// what is the output of each recursive calls: 
 </script>
 
 </html>
