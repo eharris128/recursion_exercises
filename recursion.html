@@ -33,31 +33,58 @@ function countsSheep(num) {
 // what is the input to each recursive calls: array except for the first or last item of the array
 // what is the output of each recursive calls: the array of the doubled items
 
-  function doublesArray(arr) {
-    // base case
-    if (!arr.length) {
-      return [];
-    }
-    // recursive case
-      let firstItem = arr[0]
-      return [firstItem*2, ...doublesArray(arr.slice(1))]
-  }
-
-  console.log(doublesArray([1,2,3,4,5]));
-  
-  //   function doublesArray(arr) {
+  // function doublesArray(arr) {
   //   // base case
-  //   if (arr.length === 0) {
-  //     return;
+  //   if (!arr.length) {
+  //     return [];
   //   }
   //   // recursive case
   //     let firstItem = arr[0]
-  //     let doubledArray = [];
-  //     return [...doubledArray, firstItem*2]
-  //     // firstItem*2 + doublesArray(arr.slice(1))
+  //     return [firstItem*2, ...doublesArray(arr.slice(1))]
   // }
 
-  // doublesArray([1,2,3,4,5]);
-  </script>
+  // console.log(doublesArray([1,2,3,4,5]));
+
+//Problem 3: Reverse String
+// what is the input to the program: string
+// what is the output of the program: reversed string
+// what is the input to each recursive calls:string minus the last one
+// what is the output of each recursive calls: characters in reverse order
+
+// reversesString= (str) => {
+//   // base case
+//  if (str === '') {
+//     return "";
+//   }
+//   //recursive case
+//   return str.slice(-1) + reversesString(str.slice(0, str.length-1));
+// }
+// console.log(reversesString('hi i\'m Evan'));
+
+//Problem 4: nth Triangular Number
+// what is the input: num
+// what is the output: triangularNumber
+// what is the input to each recursive calls:n-1
+// what is the output of each recursive calls: triangular(n)
+
+triangularNumber = (num) => {
+  // base case
+  if (num === 0) {
+    return 0;
+  }
+  // recursive case
+  return num + triangularNumber(num-1)
+}
+console.log(triangularNumber(1));
+console.log(triangularNumber(9)); // 3
+// tri 1 = 1
+// tri of 2 = 2 + tri(1)
+// tri of 3 = 6 = 3 + tri(2)
+// tri of 4 = 10 = 4 + tri(3)
+
+// what is the input:
+// what is the output:
+// what is the input to each recursive calls
+// what is the output of each recursive calls
   </script>
 </html>
